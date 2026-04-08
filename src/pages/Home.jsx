@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import CountdownTimer from '../components/common/CountdownTimer';
 import Logo from '../assets/Logo_SGIHPBPS.png';
+import PresidentSection from '../components/sections/PresidentSection';
+import SecretarySection from '../components/sections/SecretarySection';
+import QuickLinksSection from '../components/sections/QuickLinksSection';
 
 const fallbackEvents = [
   {
@@ -29,31 +32,16 @@ const fallbackEvents = [
   },
 ];
 
-const focusAreas = [
-  {
-    icon: 'school',
-    title: 'Education and Training',
-    description:
-      'Focused academic programs, workshops, and continuing medical education designed for a fast-evolving specialty.',
-  },
-  {
-    icon: 'biotech',
-    title: 'Research and Standards',
-    description:
-      'Shared learning, multi-institutional dialogue, and research initiatives that raise the quality of GI and HPB pathology practice.',
-  },
-  {
-    icon: 'groups',
-    title: 'Professional Community',
-    description:
-      'A national platform where pathologists can connect, exchange ideas, and support the growth of the discipline together.',
-  },
-];
-
 const overviewStats = [
   { label: 'National academic network', value: 'Pan-India' },
   { label: 'Core focus', value: 'GI and HPB Pathology' },
   { label: 'Driven by', value: 'Education, research, collaboration' },
+];
+
+const missionHighlights = [
+  'Continuous medical education, workshops, and conferences led by experts in the field.',
+  'Collaboration among healthcare professionals and encouragement for multi-institutional research.',
+  'Recognition of academic excellence, public education, and broader awareness initiatives.',
 ];
 
 const getParsedEventDate = (event) => {
@@ -192,7 +180,14 @@ const Home = () => {
             'radial-gradient(circle at top left, rgba(212, 175, 55, 0.24), transparent 34%), linear-gradient(135deg, #0A2342 0%, #091A33 56%, #0D315C 100%)',
         }}
       >
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)', backgroundSize: '42px 42px' }}></div>
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)',
+            backgroundSize: '42px 42px',
+          }}
+        ></div>
         <div className="absolute -left-16 top-16 h-40 w-40 rounded-full bg-[#D4AF37]/20 blur-3xl"></div>
         <div className="absolute bottom-0 right-0 h-56 w-56 rounded-full bg-white/10 blur-3xl"></div>
 
@@ -215,7 +210,7 @@ const Home = () => {
               </h1>
 
               <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
-                Explore the society, discover upcoming academic activity, and stay connected with a growing national community committed to excellence in gastrointestinal and hepatopancreatobiliary pathology.
+                Fostering excellence in the field of GI and HPB pathology through education, research, and collaboration, while making the society story, academic updates, and member pathways easier to explore.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -364,7 +359,7 @@ const Home = () => {
                 Latest Updates
               </p>
               <h2 className="mt-3 font-display text-3xl font-bold text-primary md:text-4xl">
-                A clearer events feed with room for society news and academic activity.
+                A clearer events feed with the society&apos;s live content still front and center.
               </h2>
               <p className="mt-4 text-base leading-8 text-slate-600">
                 Upcoming programs, recent announcements, and member-facing updates are surfaced here in a more structured, easy-to-scan format across desktop and mobile.
@@ -492,17 +487,17 @@ const Home = () => {
                 Society Snapshot
               </p>
               <h3 className="mt-4 text-3xl font-bold leading-tight">
-                The refreshed home page keeps visitors moving with purpose.
+                The refreshed home page keeps the original story but presents it more clearly.
               </h3>
               <p className="mt-5 text-sm leading-7 text-slate-200">
-                The new layout balances institutional identity with practical navigation, so visitors can quickly understand the society, find updates, and move toward membership or event participation.
+                The new layout balances institutional identity with practical navigation, while preserving the mission-led content that already exists on the live site.
               </p>
 
               <div className="mt-8 space-y-4">
                 {[
-                  'Live academic updates are surfaced with stronger card structure and clearer calls to action.',
-                  'The hero now introduces the society and the next relevant step instead of only presenting a static welcome.',
-                  'Every section stacks cleanly on mobile while preserving the site\'s blue-and-gold identity.',
+                  'Live academic updates remain visible with stronger card structure and clearer calls to action.',
+                  'The hero introduces the society and the next relevant step without losing the existing theme.',
+                  'The original mission and leadership sections continue below, now fitting into a cleaner overall flow.',
                 ].map((point) => (
                   <div
                     key={point}
@@ -540,39 +535,55 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
-            className="mx-auto max-w-3xl text-center"
+            className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start"
           >
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#9B7B18]">
-              What the Society Builds
-            </p>
-            <h2 className="mt-3 font-display text-3xl font-bold text-primary md:text-4xl">
-              A more confident presentation of the same mission-driven work.
-            </h2>
-            <p className="mt-4 text-base leading-8 text-slate-600">
-              These focus areas remain central to the identity of SGIHPBP and now sit within a cleaner, more contemporary visual system.
-            </p>
-          </motion.div>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#9B7B18]">
+                Our Mission
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-bold text-primary md:text-4xl">
+                The same mission-led content from the live site, now given more breathing room.
+              </h2>
+              <p className="mt-6 text-base leading-8 text-slate-600">
+                Our mission is to advance the standards of education, training, and research in Gastrointestinal and Hepatobiliary pathology across India. We are dedicated to establishing institutions and organizing comprehensive programs such as continuous medical education, workshops, and conferences led by experts in the field. By fostering collaboration among healthcare professionals, encouraging multi-institutional research, and recognizing academic excellence, we strive to provide outstanding care and support for both practitioners and patients. We are also committed to promoting public education and awareness, including the integration of wellness practices like Yoga, to benefit the broader community.
+              </p>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {focusAreas.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
-                className="rounded-[2rem] border border-slate-200 bg-background-light p-8 shadow-sm"
-              >
-                <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-white">
-                  <span className="material-symbols-outlined text-3xl">{item.icon}</span>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  to="/about-us"
+                  className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-white transition duration-300 hover:bg-[#12325c]"
+                >
+                  Learn More
+                </Link>
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center justify-center rounded-full border border-primary/15 px-6 py-3 text-sm font-semibold text-primary transition duration-300 hover:bg-primary/5"
+                >
+                  Contact the Society
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid gap-4">
+              {missionHighlights.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-[1.5rem] border border-slate-200 bg-background-light p-5 shadow-sm"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="material-symbols-outlined mt-1 text-[#D4AF37]">check_circle</span>
+                    <p className="text-sm leading-7 text-slate-600">{item}</p>
+                  </div>
                 </div>
-                <h3 className="mt-6 text-2xl font-bold text-primary">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
+
+      <PresidentSection />
+      <SecretarySection />
+      <QuickLinksSection />
     </main>
   );
 };
