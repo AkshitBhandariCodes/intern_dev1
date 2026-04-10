@@ -17,6 +17,7 @@ import CaseOfTheMonth from './pages/CaseOfTheMonth'
 import MembersDetails from './pages/MemberDetails'
 import MembershipRegistration from './pages/MembershipRegistration';
 import EventRegistration from './pages/EventRegistration';
+import Gallery from './pages/Gallery';
 
 function App() {
   const location = useLocation()
@@ -37,6 +38,7 @@ function App() {
           <Route path="/members-directory" element={<MembersDetails />} />
           <Route path="/academics-events" element={<AcademicsEvents />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/journal-search" element={<JournalSearch />} />
           <Route path="/case-of-the-month" element={<CaseOfTheMonth />} />

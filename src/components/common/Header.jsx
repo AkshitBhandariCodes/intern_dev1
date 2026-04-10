@@ -103,6 +103,7 @@ const Header = ({ currentPage }) => {
       ],
     },
     { to: '/publications', label: 'Publications', page: 'publications', icon: 'article' },
+    { to: '/gallery', label: 'Gallery', page: 'gallery', icon: 'photo_library' },
     { to: '/contact-us', label: 'Contact Us', page: 'contact-us', icon: 'contact_mail' },
   ];
 
@@ -122,6 +123,7 @@ const Header = ({ currentPage }) => {
     { to: '/journal-search', label: 'Journal Search', page: 'journal-search', icon: 'find_in_page' },
     { to: '/case-of-the-month', label: 'Case of the Month', page: 'case-of-the-month', icon: 'quiz' },
     { to: '/publications', label: 'Publications', page: 'publications', icon: 'article' },
+    { to: '/gallery', label: 'Gallery', page: 'gallery', icon: 'photo_library' },
     { to: '/contact-us', label: 'Contact Us', page: 'contact-us', icon: 'contact_mail' },
   ];
 
