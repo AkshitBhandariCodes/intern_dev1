@@ -11,8 +11,8 @@ const PresidentMessage = () => {
         >
             <SEO 
                 title="President's Message" 
-                description="Read the message from the President of SGIHPBP, Prof. Puja Sakhuja."
-                keywords="president message, SGIHPBP president, pathology society leadership"
+                description="Read the message from the President of the Delhi Chapter, IAPM."
+                keywords="president message, Delhi Chapter IAPM, pathology society leadership"
             />
             <div className="container mx-auto px-4 lg:px-6 py-16">
                 <div className="max-w-4xl mx-auto">
@@ -34,10 +34,10 @@ const PresidentMessage = () => {
                         </div>
                         <div className="text-center sm:text-left pt-4">
                             <h2 className="text-3xl font-bold font-display text-primary dark:text-white">
-                                Prof. Puja Sakhuja
+                                Prof (Dr) Sonal Sharma
                             </h2>
                             <p className="text-lg text-text-muted-light dark:text-text-muted-dark mt-2">
-                                President, SGIHPBP's of India
+                                President, Delhi Chapter IAPM
                             </p>
                         </div>
                     </motion.div>
@@ -50,29 +50,29 @@ const PresidentMessage = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
                         <p>
-                            It gives me great pleasure to extend a warm welcome to all members and colleagues to the Society of Gastrointestinal and Hepatopancreatobiliary Pathologist's (SGIHPBP's), of India. Our Society has been established with the vision of advancing the discipline of gastrointestinal and Hepatopancreatobiliary pathology in our country, a field that lies at the crossroads of clinical medicine, surgery, and research.
+                            It gives me immense pleasure and pride to address you through the official website of the Delhi Chapter of the Indian Association of Pathologists and Microbiologists.
                         </p>
                         &nbsp;
                         <p>
-                            Our foremost aim is to promote collaboration and translational research that bridges the gap between diagnostic pathology and clinical application, directly addressing real-world challenges and contributing to improved patient outcomes.
+                            The Delhi Chapter has consistently upheld the highest standards of academic excellence, professional integrity, and collaborative spirit. We remain committed to advancing the science and practice of Pathology and Microbiology through continuous education, research initiatives, and meaningful academic interactions.
                         </p>
                         &nbsp;
                         <p>
-                            We are equally committed to capacity building and education through multidisciplinary workshops, hands-on training programs, and academic meetings that foster learning and the exchange of expertise across institutions and experience levels.
+                            In an era of rapidly evolving diagnostic technologies and precision medicine, the role of pathologists has become more crucial than ever. Our chapter aims to provide a vibrant platform for knowledge exchange, skill enhancement, and mentorship - particularly for our postgraduate students and young colleagues who represent the future of our specialty.
                         </p>
                         &nbsp;
                         <p>
-                            As a Society, we aspire to raise the standards of practice by integrating the latest scientific developments and technological innovations into routine diagnostic workflows. By doing so, we hope to create a dynamic platform that not only supports professional growth but also contributes meaningfully to the progress of gastrointestinal and HPB pathology in India.
+                            Through conferences, CMEs, workshops, and interdisciplinary collaborations, we strive to foster innovation while maintaining the core values of ethics and patient-centered care. This website will serve as a dynamic medium to share updates, academic resources, upcoming events, and achievements of our esteemed members.
                         </p>
                         &nbsp;
                         <p>
-                            I invite all colleagues, trainees, and allied specialists to actively participate in this collective endeavour to learn, collaborate, and contribute towards shaping the future of our specialty. Together, we can strengthen our community and make a lasting impact on patient care and scientific advancement.
+                            I invite all members to actively participate, contribute, and engage in the activities of the Delhi Chapter. Together, let us continue to strengthen our professional community and uphold the legacy of excellence associated with our association.
                         </p>
                         &nbsp;
                         <p>
-                            <strong>Prof. Puja Sakhuja</strong><br />
-                            President,<br />
-                            SGIHPBP's of India
+                            With warm regards,<br />
+                            <strong>Prof (Dr) Sonal Sharma</strong><br />
+                            President, Delhi Chapter IAPM
                         </p>
                     </motion.div>
                 </div>

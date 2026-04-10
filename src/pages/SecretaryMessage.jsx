@@ -11,8 +11,8 @@ const SecretaryMessage = () => {
     >
       <SEO 
         title="Secretary's Message" 
-        description="Read the message from the Secretary General of SGIHPBP, Prof. Prasenjit Das."
-        keywords="secretary message, SGIHPBP secretary, pathology society leadership"
+        description="Read the message from the Secretary of Delhi Chapter IAPM."
+        keywords="secretary message, Delhi Chapter IAPM, pathology society leadership"
       />
       <div className="container mx-auto px-4 lg:px-6 py-16">
         <div className="max-w-4xl mx-auto">
@@ -34,10 +34,10 @@ const SecretaryMessage = () => {
             </div>
             <div className="text-center sm:text-left pt-4">
               <h2 className="text-3xl font-bold font-display text-primary dark:text-white">
-                Prof Prasenjit Das
+                Dr Prasenjit Das
               </h2>
               <p className="text-lg text-text-muted-light dark:text-text-muted-dark mt-2">
-                Secretary General, SGIHPBP's of India
+                Secretary, DC-IAPM
               </p>
             </div>
           </motion.div>
@@ -50,28 +50,39 @@ const SecretaryMessage = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p>
-              Dear Members and Colleagues,
+              Secretary's Message
             </p>
             &nbsp;
 
             <p>
-              I am deeply honored to serve as the Secretary General of the Society of Gastrointestinal and Hepatopancreatobiliary Pathologist's of India (SGIHPBP's). I am committed to advancing our society in alignment with our core mission of training, collaboration, research, and academic excellence.
+              Dear Colleagues,
             </p>
             &nbsp;
             <p>
-              This is a pivotal time for every anatomic pathologist to consider specializing and refining their skills and knowledge in specific areas of surgical pathology and cytopathology. In today's era of personalized medicine, it is essential not only to excel in anatomic pathology but also to embrace all facets of tissue and cellular pathology, including genomics, transcriptomics, and metabolomics. The integration of artificial intelligence will augment our capabilities, enhancing our performance and precision in the near future, and it is crucial that we incorporate these advancements into our daily practice.
+              It gives me great pleasure to share an update from the Delhi Chapter of the Indian Association of Pathologists and Microbiologists (DC-IAPM). While our Chapter was formally registered in 2025, our academic spirit and collegial network have remained active for the last couple of decades, built on the steady commitment of our seniors and the continued participation of members across institutions in Delhi and the NCR region.
             </p>
             &nbsp;
             <p>
-              Together, I believe we can guide SGIHPBP's to the forefront of this transformation, fostering excellence in gastrointestinal and hepatopancreatobiliary pathology through our diverse activities. As we stand on the threshold of a new era in healthcare, I am truly excited about the opportunities that await our society.
+              In the current year, we have renewed our focus on regular, high-quality academic engagement. New and more active academic activities are being rolled out in the form of quarterly scientific sessions, and mid-year CME designed to be relevant for both early-career colleagues and experienced practitioners. We also had the first Annual Conference of the registered DC-IAPM in the first week of March 2026, envisioned as a flagship event that brought together pathologists and microbiologists from across the region for scientific deliberations, guest lectures, free paper and poster presentations, and meaningful peer interaction. We look forward to many more academic meetings in coming days.
             </p>
             &nbsp;
-            <p>With warm regards,</p>
+            <p>
+              A key administrative initiative this year is to unify and update our legacy member records. Many colleagues have been associated with the Chapter over the years, and we are working to consolidate the old members list, verify contact details, and ensure that every member is connected to upcoming communications and activities. I request all members, especially our senior colleagues and institutional representatives, to support this effort by sharing updated information and helping us reach members who may have changed workplaces or contact numbers. We are also making a professional interactive website for members intimation, updates and membership applications.
+            </p>
             &nbsp;
             <p>
-              <strong>Prof Prasenjit Das</strong><br />
-              Secretary General,<br />
-              SGIHPBP's of India
+              With your continued guidance and support, DC-IAPM will remain a vibrant forum for learning, collaboration, and professional excellence, following the footprints of our national body, IAPM.
+            </p>
+            &nbsp;
+            <p>
+              Looking forward to your feedback and ideas for taking this chapter forward.
+            </p>
+            &nbsp;
+            <p>
+              Warm regards,<br />
+              <strong>Dr Prasenjit Das</strong><br />
+              Secretary<br />
+              DC-IAPM
             </p>
           </motion.div>
         </div>

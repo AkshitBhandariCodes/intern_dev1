@@ -18,7 +18,7 @@ const QuickLinksSection = () => {
   const quickLinks = [
     {
       title: "President's Message",
-      description: "Read a welcoming address from our esteemed President, Prof Puja Sakhuja.",
+      description: "Read a welcoming address from our esteemed President, Prof (Dr) Sonal Sharma.",
       link: "/president-message",
       linkText: "Read More"
     },

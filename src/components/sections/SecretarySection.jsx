@@ -25,23 +25,23 @@ const SecretarySection = () => {
               src={DrPrasenjitDas}
             />
             <h3 className="font-display text-2xl font-bold text-primary dark:text-white mt-6">
-              Prof Prasenjit Das
+              Dr Prasenjit Das
             </h3>
             <p className="text-gold-DEFAULT dark:text-gold-light font-semibold">
-              Secretary General, SGIHPBP's
+              Secretary, DC-IAPM
             </p>
           </motion.div>
 
           <div className="md:w-2/3">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4 text-center md:text-left">
-              Message from the Secretary General
+              Message from the Secretary
             </h2>
             <div className="w-24 h-1 bg-gold-DEFAULT mb-6 mx-auto md:mx-0"></div>
             <p className="text-gray-600 dark:text-gray-200 mb-2 text-justify">
-              Dear Members and Colleagues,
+              Dear Colleagues,
             </p>
             <p className="text-gray-600 dark:text-gray-200 mb-6 leading-relaxed text-justify">
-              "I am deeply honored to serve as the Secretary General of the Society of Gastrointestinal and Hepatopancreatobiliary Pathologist's of India (SGIHPBP's). I am committed to advancing our society in alignment with our core mission of training, collaboration, research, and academic excellence."
+              "It gives me great pleasure to share an update from the Delhi Chapter of the Indian Association of Pathologists and Microbiologists (DC-IAPM)."
             </p>
             <motion.div
               whileHover={{ scale: 0.95 }}
