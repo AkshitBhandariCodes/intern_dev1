@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
-import PaymentQR from '../assets/qrcode.jpg';
+import PaymentQR from '../images/qr.png';
 
 const MembershipRegistration = () => {
   // State to toggle between Registration and Status Check
@@ -234,8 +234,8 @@ const MembershipRegistration = () => {
     >
       <SEO 
         title="Join Membership" 
-        description="Register for SGIHPBP membership. Apply for Life, Associate, or Ad Hoc membership."
-        keywords="join SGIHPBP, membership registration, pathology society application"
+        description="Register for DC-IAPM membership. Apply for Life, Associate, or Ad Hoc membership."
+        keywords="join DC-IAPM, membership registration, pathology society application"
       />
       <div className="max-w-6xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden">
         
@@ -282,11 +282,11 @@ const MembershipRegistration = () => {
                 <div className="bg-white dark:bg-gray-600 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-500">
                   <h4 className="font-bold text-lg mb-3 text-primary dark:text-white border-b pb-2">Bank Transfer</h4>
                   <div className="space-y-2">
-                      <p><strong>Account Name:</strong> Society of Gastrointestinal & Hepato-Pancreatobiliary Pathologist's</p>
-                      <p><strong>Bank:</strong> Bank of Baroda</p>
-                      <p><strong>Account No:</strong> 26020100024967</p>
-                      <p><strong>IFSC Code:</strong> BARB0RAMDEL <br/><span className="text-xs text-red-500">(5th character is Zero)</span></p>
-                      <p><strong>Branch:</strong> Dr. RML Hospital, New Delhi</p>
+                      <p><strong>Account Name:</strong> DELHI CH OF IAPM</p>
+                      <p><strong>Account No:</strong> 1210463576</p>
+                      <p><strong>Bank Details:</strong> CENTRAL BANK OF INDIA</p>
+                      <p><strong>Branch:</strong> LADY HARDINGE MED COLL AND HOSPITAL BRANCH, OPP PANCHKUIAN ROAD</p>
+                      <p><strong>IFSC Code:</strong> CBIN0283462</p>
                   </div>
                 </div>
 

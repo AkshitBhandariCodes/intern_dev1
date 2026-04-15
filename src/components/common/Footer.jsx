@@ -42,14 +42,14 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <div className="flex items-center space-x-3 mb-4">
               <img
-                alt="SGIHPBP's of India Logo"
+                alt="DC-IAPM Logo"
                 className="h-14 w-14"
                 src={Logo}
               />
-              <h3 className="font-display text-lg font-bold">SGIHPBP's of India</h3>
+              <h3 className="font-display text-lg font-bold">DC-IAPM</h3>
             </div>
             <p className="text-sm text-gray-300">
-              The Society of Gastrointestinal & Hepato-Pancreatobiliary Pathologist's of India.
+              Delhi Chapter of Indian Association of Pathologists and Microbiologists.
             </p>
           </motion.div>
 
@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          <p>&copy; 2025 Society of Gastrointestinal & Hepato-Pancreatobiliary Pathologist's of India. All Rights Reserved.</p>
+          <p>&copy; 2026 Delhi Chapter of Indian Association of Pathologists and Microbiologists (DC-IAPM). All Rights Reserved.</p>
           
         </div>
       </div>

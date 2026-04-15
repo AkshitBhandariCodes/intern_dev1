@@ -28,7 +28,7 @@ const CaseOfTheMonth = () => {
       <SEO 
         title="Case of the Month" 
         description="Explore our monthly featured clinical cases with detailed analysis and discussion."
-        keywords="pathology cases, clinical case study, medical education, SGIHPBP cases"
+         keywords="pathology cases, clinical case study, medical education, DC-IAPM cases"
       />
       <ComingSoon 
         title="Case of the Month" 

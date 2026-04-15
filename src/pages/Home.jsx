@@ -64,8 +64,8 @@ const Home = () => {
     <main>
       <SEO 
         title="Home" 
-        description="Welcome to the Society of Gastrointestinal & Hepato-Pancreatobiliary Pathologists of India (SGIHPBP). Advancing pathology through education and research."
-        keywords="SGIHPBP, pathology society India, GI pathology, HPB pathology, medical education"
+        description="Welcome to the Delhi Chapter of Indian Association of Pathologists and Microbiologists (DC-IAPM). Advancing pathology through education and research."
+        keywords="DC-IAPM, pathology society India, IAPM Delhi chapter, medical education"
       />
       <HeroSection />
       <EventTicker />

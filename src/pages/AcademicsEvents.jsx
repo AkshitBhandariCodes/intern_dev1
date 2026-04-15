@@ -81,8 +81,8 @@ const AcademicsEvents = () => {
     >
       <SEO 
         title="Academics & Events" 
-        description="Stay updated with the latest academic events, conferences, and workshops organized by SGIHPBP."
-        keywords="pathology events, medical conferences, SGIHPBP academics, workshops"
+        description="Stay updated with the latest academic events, conferences, and workshops organized by DC-IAPM."
+        keywords="pathology events, medical conferences, DC-IAPM academics, workshops"
       />
       <div className="text-center max-w-4xl mx-auto mb-16">
         <h1 className="text-4xl md:text-5xl font-display font-bold text-primary dark:text-white mb-4">

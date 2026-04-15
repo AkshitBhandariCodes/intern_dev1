@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 const SEO = ({ title, description, keywords }) => {
   return (
     <Helmet>
-      <title>{title} | SGIHPBP</title>
+      <title>{title} | DC-IAPM</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       {/* Open Graph / Facebook */}

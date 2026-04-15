@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import SEO from '../components/SEO';
-import PaymentQR from '../assets/qrcode.jpg';
+import PaymentQR from '../images/qr.png';
 
 const EventRegistration = () => {
   const location = useLocation();
@@ -185,7 +185,7 @@ const EventRegistration = () => {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="container mx-auto px-4 py-12">
       <SEO 
         title="Event Registration" 
-        description="Register for upcoming SGIHPBP events, workshops, and conferences."
+        description="Register for upcoming DC-IAPM events, workshops, and conferences."
         keywords="event registration, medical conference registration, pathology workshop"
       />
       <div className="max-w-6xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-2xl overflow-hidden">
@@ -237,11 +237,11 @@ const EventRegistration = () => {
             <div className="bg-white dark:bg-gray-600 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-500 text-center">
               <p className="font-bold text-left mb-2 border-b pb-2">Bank Transfer / UPI</p>
               <div className="text-sm text-left space-y-2 mb-4">
-                <p><strong>Account Name:</strong> SGIHPBP's</p>
-                <p><strong>Bank:</strong> Bank of Baroda</p>
-                <p><strong>A/c No:</strong> 26020100024967</p>
-                <p><strong>IFSC:</strong> BARB0RAMDEL <br /><span className="text-[10px] text-red-500">(5th char is Zero)</span></p>
-                <p><strong>Branch:</strong> Dr. RML Hospital, New Delhi</p>
+                <p><strong>Account Name:</strong> DELHI CH OF IAPM</p>
+                <p><strong>A/c No:</strong> 1210463576</p>
+                <p><strong>Bank:</strong> CENTRAL BANK OF INDIA</p>
+                <p><strong>Branch:</strong> LADY HARDINGE MED COLL AND HOSPITAL BRANCH, OPP PANCHKUIAN ROAD</p>
+                <p><strong>IFSC:</strong> CBIN0283462</p>
               </div>
               <div className="flex flex-col items-center pt-2 border-t">
                 <a href={PaymentQR} target="_blank" rel="noopener noreferrer" className="w-full block">
@@ -335,7 +335,7 @@ const EventRegistration = () => {
                 </div>
 
                 <div className="p-4 bg-gray-50 dark:bg-gray-700 rounded border border-gray-200 dark:border-gray-600">
-                  <label className="form-label mb-2">Are you a Member of SGIHPBP's? <span className="text-red-500">*</span></label>
+                  <label className="form-label mb-2">Are you a member of DC-IAPM? <span className="text-red-500">*</span></label>
                   <div className="flex gap-6">
                     <label className="flex items-center cursor-pointer"><input type="radio" name="IsMember" value="Yes" checked={formData.IsMember === 'Yes'} onChange={handleChange} className="mr-2" /> Yes</label>
                     <label className="flex items-center cursor-pointer"><input type="radio" name="IsMember" value="No" checked={formData.IsMember === 'No'} onChange={handleChange} className="mr-2" /> No</label>

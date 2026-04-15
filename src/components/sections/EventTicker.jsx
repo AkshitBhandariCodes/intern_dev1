@@ -33,7 +33,7 @@ const EventTicker = () => {
     // Use default static events if API returns empty or while loading to avoid empty bar
     const displayEvents = events.length > 0 ? events : [
         {
-            title: "Welcome to SGIHPBPs of India",
+            title: "Welcome to DC-IAPM",
             date: new Date().getFullYear(),
             location: "New Delhi"
         }

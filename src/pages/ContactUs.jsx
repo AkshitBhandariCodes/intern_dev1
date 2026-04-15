@@ -18,7 +18,7 @@ const ContactUs = () => {
   });
 
   const [contactInfo] = useState({
-    officeName: "SGIHPBP's Registered Office",
+    officeName: "DC-IAPM's Registered Office",
     address: '78, LD Block, PITAMPURA,\nNew Delhi-110034',
     phone: '+919873898110',
     email: 'dciapmdciapm@gmail.com'
@@ -86,8 +86,8 @@ const ContactUs = () => {
     >
       <SEO 
         title="Contact Us" 
-        description="Get in touch with SGIHPBP. Find our registered office address, email, and phone number."
-        keywords="contact SGIHPBP, pathology society contact, medical society India address"
+        description="Get in touch with DC-IAPM. Find our registered office address, email, and phone number."
+        keywords="contact DC-IAPM, pathology society contact, IAPM Delhi chapter"
       />
       <div className="container mx-auto px-6 py-6">
         <motion.div 

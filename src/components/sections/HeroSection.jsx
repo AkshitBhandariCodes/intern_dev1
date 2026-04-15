@@ -55,7 +55,7 @@ const HeroSection = () => {
           {/* 4. Color Enhancement:
               - Used the site's accent color (gold) for key words.
           */}
-          Welcome to the <span className="text-gold-light">Society of Gastrointestinal & Hepato-Pancreatobiliary Pathologist's of India</span> (SGIHPBP's of India)
+          Welcome to the <span className="text-gold-light">Delhi Chapter of Indian Association of Pathologists and Microbiologists</span> (DC-IAPM)
         </motion.h1>
         
         <motion.p 

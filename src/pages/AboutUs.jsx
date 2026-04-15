@@ -11,8 +11,8 @@ const AboutUs = () => {
     >
       <SEO 
         title="About Us" 
-        description="Learn about the mission, goals, and guiding principles of the Society of Gastrointestinal & Hepato-Pancreatobiliary Pathologists of India."
-        keywords="about SGIHPBP, pathology mission, medical society goals"
+        description="Learn about the mission, vision, and roles of the Delhi Chapter of Indian Association of Pathologists and Microbiologists."
+        keywords="about DC-IAPM, pathology mission, IAPM Delhi chapter"
       />
       {/* Page Header */}
       <div className="text-center mb-16">
@@ -30,8 +30,7 @@ const AboutUs = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          Understanding the Society of Gastrointestinal & Hepato-Pancreatobiliary Pathologist's of India
-          (SGIHPBP's) - our purpose, goals, and guiding principles.
+          Understanding DC-IAPM - our purpose, goals, and guiding principles.
         </motion.p>
       </div>
 
@@ -52,23 +51,25 @@ const AboutUs = () => {
               Our Mission
             </h2>
             <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
-             Our mission is to advance the standards of education, training, and research in Gastrointestinal and Hepatobiliary pathology across India. We are dedicated to establishing institutions and organizing comprehensive programs such as continuous medical education, workshops, and conferences led by experts in the field. By fostering collaboration among healthcare professionals, encouraging multi-institutional research, and recognizing academic excellence, we strive to provide outstanding care and support for both practitioners and patients. We are also committed to promoting public education and awareness, including the integration of wellness practices like Yoga, to benefit the broader community.
+             The DC-IAPM is a state chapter of the Indian Association of Pathologists and Microbiologists (IAPM), registered on 3rd July 2025. Our mission is to advance the standards of pathology education, training, and research through cooperation and achieve the upbringing of all medical establishments in the NCT of Delhi, as per the aims and objectives of the IAPM. We are committed to organize academic programs such as continuous medical education, workshops, and conferences led by experts in the field. By nurturing the young minds and fostering academic networks we aim to encourage multi-institutional partnerships and research. We also strive to collaborate with practising pathologists and patients and work together for collective growth.
             </p>
           </div>
 
           {/* Our Role (Moved Up) */}
           <div className="bg-secondary-light dark:bg-secondary-dark p-8 rounded-lg shadow-sm h-full flex flex-col">
             <h2 className="text-3xl font-bold font-display text-accent-blue dark:text-white mb-4">
-              Our Role
+              Our Roles
             </h2>
             <div className="text-base text-gray-700 dark:text-gray-300 leading-relaxed ">
-              <p><b>As the national representative for gastrointestinal and Hepatopancreatobiliary Pathologist's, in India, SGIHPBP's role is:</b></p>
-              <ul className="text-justify">
-                &nbsp;
-                <li>â€¢ Train and educate anatomic Pathologist's in this evolving field of pathology</li>
-                <li>â€¢ Provide a platform for national and international professionals working in this field to come together to update knowledge and skills, exchange ideas and network, and learn about latest innovations and developments.</li>
-                <li>â€¢ Facilitating training and research in collaboration with eminent international societies to encourage young anatomic Pathologist's to work in this field.</li>
-                <li>â€¢ To collaborate and work together with international societies of gastroenterology, hepatology, gastrointestinal pathology and Hepatopancreatobiliary pathology in the best possible manner.</li>
+              <p><b>As a state chapter of the IAPM, the roles of DC-IAPM are:</b></p>
+              <ul className="text-justify list-disc pl-6 mt-3 space-y-2">
+                <li>Work in consultation and collaboration with the IAPM and follow its by-laws.</li>
+                <li>Organize continuous academic activities for faculties, postgraduate students, fellows and practising pathologists.</li>
+                <li>Provide a platform for pathologists working in the NCT of Delhi to come together to update knowledge and skills, exchange ideas, network, and learn about latest innovations and developments.</li>
+                <li>Facilitate training and research in collaboration with IAPM and other specialty societies.</li>
+                <li>Communicate with members and notify academic programs and developments through the website and posts.</li>
+                <li>Share academic event reports with the IAPM for evaluation of chapter activities.</li>
+                <li>Coordinate with IAPM and facilitate national initiatives such as National UG Quiz, National PG Quiz, surveys, etc.</li>
               </ul>
             </div>
           </div>
@@ -88,7 +89,7 @@ const AboutUs = () => {
               Our Vision
             </h2>
             <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
-             Our vision is to create a future where knowledge and understanding of Gastrointestinal and Hepatobiliary disorders are widespread, and where patients receive the highest quality care through a well-trained and informed network of professionals. We aim to build strong collaborations with national and international organizations, facilitate innovative research, and develop infrastructure to support our objectives. By nurturing emerging talents and continuously improving educational standards, we aspire to be a leading force in enhancing healthcare outcomes and supporting communities during times of need.
+             Our vision is to create an informed and skilled pathology workforce in the NCT of Delhi, so that pathologists working in this NCT can deliver highest quality. We strive to collaborate with IAPM, other specialty societies, institutes and professionals to arrange high quality career development programs and trainings. When we train and educate ourselves, we can envision deficiencies and strive to upgrade our infrastructure and training. By nurturing emerging talents and continuously improving educational standards, we aspire to be a leading force in enhancing healthcare outcomes not only in the NCT of Delhi, but in the whole country.
             </p>
           </div>
           
@@ -98,7 +99,7 @@ const AboutUs = () => {
               Our Constitution
             </h2>
             <p className="text-base text-gray-300 dark:text-gray-300 leading-relaxed text-justifymb-6">
-              The constitution of the SGIHPBP's of India outlines the framework, rules, and regulations
+              The constitution of DC-IAPM outlines the framework, rules, and regulations
               that govern our society. It details our objectives, membership criteria, governance structure,
               and the responsibilities of our office-bearers. We encourage all members and prospective
               members to familiarize themselves with this important document.
@@ -106,7 +107,7 @@ const AboutUs = () => {
             &nbsp;
             <motion.a 
               href="/constitution_of_society.pdf" 
-              download="SGIHPBP's_Constitution.pdf"
+              download="DC-IAPM_Constitution.pdf"
               className="inline-flex items-center justify-center px-8 py-3 text-accent-blue font-bold rounded-md bg-[#D4AF37] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-dark mt-auto"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}

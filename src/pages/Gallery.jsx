@@ -7,7 +7,7 @@ import SecretaryPhoto from '../assets/Dr-Prasenjit-Das,-Secrertary-General.jpg';
 import VicePresidentPhoto from '../assets/Dr-Anjali-Amarapurkar,-Vice-President.jpg';
 import TreasurerPhoto from '../assets/Dr-Arvind-Ahuja,-Treasurer.jpg';
 import JointTreasurerPhoto from '../assets/Dr-Lipika-Lipi,-Joint-Treasurer.jpg';
-import QrPhoto from '../assets/qrcode.jpg';
+import QrPhoto from '../images/qr.png';
 
 const STORAGE_KEY = 'dc_iapm_gallery_uploads';
 

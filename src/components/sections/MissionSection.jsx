@@ -17,7 +17,7 @@ const MissionSection = () => {
           </h2>
           <div className="w-24 h-1 bg-gold-DEFAULT mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed text-justify">
-            Our mission is to advance the standards of education, training, and research in Gastrointestinal and Hepatobiliary pathology across India. We are dedicated to establishing institutions and organizing comprehensive programs such as continuous medical education, workshops, and conferences led by experts in the field. By fostering collaboration among healthcare professionals, encouraging multi-institutional research, and recognizing academic excellence, we strive to provide outstanding care and support for both practitioners and patients.
+            The DC-IAPM is a state chapter of the Indian Association of Pathologists and Microbiologists (IAPM), registered on 3rd July 2025. Our mission is to advance the standards of pathology education, training, and research through cooperation and achieve the upbringing of all medical establishments in the NCT of Delhi as per the aims and objectives of the IAPM. We are committed to organizing academic programs such as continuous medical education, workshops, and conferences led by experts in the field. By nurturing young minds and fostering academic networks, we aim to encourage multi-institutional partnerships and research. We also strive to collaborate with practicing pathologists and patients and work together for collective growth.
           </p>
           <motion.div
             // Consistent hover effect

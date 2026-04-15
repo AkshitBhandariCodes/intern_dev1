@@ -70,7 +70,7 @@ const Publications = () => {
       <SEO 
         title="Publications" 
         description="Access society-endorsed guidelines, educational articles, and research findings in GI and HPB pathology."
-        keywords="pathology publications, medical guidelines, research papers, SGIHPBP journal"
+         keywords="pathology publications, medical guidelines, research papers, DC-IAPM journal"
       />
       <div className="container mx-auto max-w-5xl px-4 py-12 sm:py-16">
         <div className="mb-10 text-center">
