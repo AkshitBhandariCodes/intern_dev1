@@ -53,6 +53,7 @@ const MembersDetails = () => {
     }
 
     let isActive = true;
+    let didLoad = false;
     const callbackName = `dcMembersCallback_${Date.now()}`;
 
     setLoading(true);
@@ -101,6 +102,9 @@ const MembersDetails = () => {
     const script = document.createElement('script');
     script.src = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
     script.async = true;
+    script.onload = () => {
+      didLoad = true;
+    };
     script.onerror = () => {
       if (!isActive) return;
       setError('Unable to load member directory right now. Please try again shortly.');
@@ -112,7 +116,13 @@ const MembersDetails = () => {
     return () => {
       isActive = false;
       if (script.parentNode) script.parentNode.removeChild(script);
-      delete window[callbackName];
+      if (didLoad) {
+        delete window[callbackName];
+      } else {
+        setTimeout(() => {
+          delete window[callbackName];
+        }, 5000);
+      }
     };
   }, [GOOGLE_SCRIPT_URL]);
 
