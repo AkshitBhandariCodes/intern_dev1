@@ -77,6 +77,7 @@ const Header = ({ currentPage }) => {
       dropdown: [
         { to: '/about-us', label: 'Our Mission & Vision', icon: 'info' },
         { to: '/president-message', label: "President's Message", icon: 'person' },
+        { to: '/about-us#vice-president-message', label: "Vice President's Message", icon: 'person_outline' },
         { to: '/secretary-message', label: "Secretary General's Message", icon: 'person_outline' },
       ],
     },
@@ -112,6 +113,7 @@ const Header = ({ currentPage }) => {
     { to: '/about-us', label: 'About Us', page: 'about-us', icon: 'info' },
     { to: '/governing-body', label: 'Governing Body', page: 'governing-body', icon: 'groups' },
     { to: '/president-message', label: "President's Message", page: 'president-message', icon: 'person' },
+    { to: '/about-us#vice-president-message', label: "Vice President's Message", page: 'about-us', icon: 'person_outline' },
     { to: '/secretary-message', label: "Secretary General's Message", page: 'secretary-message', icon: 'person_outline' },
     // 2. === MODIFICATION START ===
     // Update mobile links

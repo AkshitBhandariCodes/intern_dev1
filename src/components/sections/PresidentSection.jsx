@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import DrPujaSakhuja from '../../assets/Dr-Puja-Sakhuja,-President.jpg';
+import DrSonalSharma from '../../assets/Dr Sonal Sharma, President.jpg';
 
 const PresidentSection = () => {
   return (
@@ -22,13 +22,16 @@ const PresidentSection = () => {
           >
             <img 
               className="w-64 h-64 rounded-full mx-auto object-contain border-4 border-gold shadow-xl" 
-              src={DrPujaSakhuja}
+              src={DrSonalSharma}
             />
             <h3 className="font-display text-2xl font-bold text-primary dark:text-white mt-6">
               Prof (Dr) Sonal Sharma
             </h3>
             <p className="text-gold-DEFAULT dark:text-gold-light font-semibold">
-              President, Delhi Chapter IAPM
+              President
+            </p>
+            <p className="text-xs uppercase tracking-widest text-gray-600 dark:text-gray-200 mt-1">
+              DC-IAPM
             </p>
           </motion.div>
           

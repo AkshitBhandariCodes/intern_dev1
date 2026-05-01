@@ -18,9 +18,9 @@ const MembershipRegistration = () => {
     Email: '',
     Phone: '',
     MembershipType: 'Life Membership',
-    Amount: '10,000 INR',
+    Amount: '5,000 INR',
     TransactionDetails: '',
-    Interest: 'I am a gastrointestinal & hepatopancreatobiliary pathologist',
+    Interest: 'I am an academic pathologist',
     photo: null
   });
   const [regStatus, setRegStatus] = useState(null); // null, 'submitting', 'success', 'error'
@@ -182,9 +182,9 @@ const MembershipRegistration = () => {
       });
       setRegStatus('success');
       setFormData({
-         Name: '', Institution: '', Qualification: '', Practicing: 'Yes', StudentStatus: '', 
-         Address: '', Email: '', Phone: '', MembershipType: 'Life Membership', 
-         Amount: '10,000 INR', TransactionDetails: '', Interest: 'I am a gastrointestinal & hepatopancreatobiliary pathologist', photo: null
+        Name: '', Institution: '', Qualification: '', Practicing: 'Yes', StudentStatus: '', 
+        Address: '', Email: '', Phone: '', MembershipType: 'Life Membership', 
+        Amount: '5,000 INR', TransactionDetails: '', Interest: 'I am an academic pathologist', photo: null
       });
       setErrors({});
     } catch (error) {
@@ -264,6 +264,16 @@ const MembershipRegistration = () => {
               }`}
             >
               Check Status / Download
+            </button>
+            <button 
+              onClick={() => setActiveTab('promo')}
+              className={`px-6 py-2 rounded-full font-bold transition-all ${
+                activeTab === 'promo' 
+                ? 'bg-white text-primary shadow-lg' 
+                : 'bg-primary-dark text-white/70 border border-white/30 hover:bg-primary-light'
+              }`}
+            >
+              Promotional Drive
             </button>
           </div>
         </div>
@@ -447,16 +457,16 @@ const MembershipRegistration = () => {
                               <label className="form-label">Membership Type <span className="text-red-500">*</span></label>
                               <select name="MembershipType" value={formData.MembershipType} onChange={handleChange} className="form-input">
                                   <option>Life Membership</option>
-                                  <option>Ad Hoc Membership (For 3 years)</option>
-                                  <option>Associate Life Membership</option>
+                                  <option>Ad Hoc Membership (3 years)</option>
+                                  <option>Overseas Membership (3 years)</option>
                               </select>
                           </div>
                           <div>
                               <label className="form-label">Amount Paid <span className="text-red-500">*</span></label>
                               <select name="Amount" value={formData.Amount} onChange={handleChange} className="form-input">
-                                  <option>10,000 INR</option>
-                                  <option>2,500 INR</option>
-                                  <option>300 USD</option>
+                                  <option>5,000 INR</option>
+                                  <option>1,500 INR</option>
+                                  <option>200 USD</option>
                               </select>
                           </div>
                       </div>
@@ -475,17 +485,15 @@ const MembershipRegistration = () => {
                       </div>
                   </div>
 
-                  <div>
-                      <label className="form-label">Interest in GI & HPB Pathology <span className="text-red-500">*</span></label>
+                    <div>
+                      <label className="form-label">Category <span className="text-red-500">*</span></label>
                       <select name="Interest" value={formData.Interest} onChange={handleChange} className="form-input">
-                          <option>I am a gastrointestinal & hepatopancreatobiliary pathologist</option>
-                          <option>I am a PG student interested in this field of pathology</option>
-                          <option>I am a Fellow/ PDCC in gastrointestinal & hepatopancreatobiliary pathology</option>
-                          <option>I am a clinical gastroenterologist/ gastrointestinal surgeon/ radiologist</option>
-                          <option>I am a researcher in this field</option>
-                          <option>I am a pathologist who wants to be associated with this society to remain updated</option>
+                        <option>I am an academic pathologist</option>
+                        <option>I am a practicing pathologist</option>
+                        <option>I am a post graduate student/ fellow</option>
+                        <option>I am a pathologist working outside India</option>
                       </select>
-                  </div>
+                    </div>
 
                   <button 
                     type="submit" 
@@ -580,6 +588,21 @@ const MembershipRegistration = () => {
                 <p>Unable to connect to the server. Please try again later.</p>
               </div>
             )}
+          </div>
+        )}
+
+        {/* === TAB 3: PROMOTIONAL DRIVE === */}
+        {activeTab === 'promo' && (
+          <div className="p-12 max-w-3xl mx-auto min-h-[300px]">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 text-center shadow-sm">
+              <h2 className="text-2xl font-bold text-primary mb-3">Promotional Membership Drive</h2>
+              <p className="text-gray-700 mb-4">
+                Pathologists can become members by paying only Rs 1,500 until Dec 31, 2026.
+              </p>
+              <p className="text-sm text-gray-600">
+                Please select the appropriate membership type in the application form and complete the payment before the deadline.
+              </p>
+            </div>
           </div>
         )}
 

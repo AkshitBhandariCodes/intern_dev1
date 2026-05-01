@@ -28,7 +28,10 @@ const SecretarySection = () => {
               Dr Prasenjit Das
             </h3>
             <p className="text-gold-DEFAULT dark:text-gold-light font-semibold">
-              Secretary, DC-IAPM
+              Secretary
+            </p>
+            <p className="text-xs uppercase tracking-widest text-gray-600 dark:text-gray-200 mt-1">
+              DC-IAPM
             </p>
           </motion.div>
 

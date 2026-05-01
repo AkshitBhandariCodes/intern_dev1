@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { UserCircle2 } from 'lucide-react';
 import SEO from '../components/SEO';
 
-import PresidentPhoto from '../images/Dr Sonal Sharma, President.jpg';
+import PresidentPhoto from '../assets/Dr Sonal Sharma, President.jpg';
 import VicePresidentPhoto from '../images/Dr Arvind Ahuja,Vice President.JPG';
 import SecretaryPhoto from '../assets/Dr-Prasenjit-Das,-Secrertary-General.jpg';
 import JointSecretaryPhoto from '../images/Dr Nadeem Tanveer, Joint-Secretary.webp';
@@ -57,6 +57,7 @@ const OfficerCard = ({ member }) => (
     </div>
     <h3 className="text-primary dark:text-white text-lg font-bold mb-1">{member.name}</h3>
     <p className="text-gray-700 dark:text-gray-300 text-sm">{member.position}</p>
+    <p className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 mt-1">DC-IAPM</p>
   </motion.div>
 );
 

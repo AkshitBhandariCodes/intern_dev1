@@ -62,7 +62,7 @@ const HeroSection = () => {
           className="text-lg hidden md:block font font-semibold md:text-xl max-w-3xl mx-auto text-shadow-sm mb-8" //
           variants={itemVariants} // Animate as a child item
         >
-          Fostering excellence in the field of GI & HPB pathology through education, research, and collaboration.
+          Fostering excellence in the field of Pathology through education, research, and collaboration.
         </motion.p>
 
         {/* 5. Call-to-Action (CTA) Button:

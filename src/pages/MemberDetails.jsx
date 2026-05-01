@@ -8,6 +8,8 @@ const EMAIL_TABS = [
   { id: 'without_email', label: 'Without Email' },
 ];
 
+const DIRECTORY_HEADERS = ['Member Name', 'Hospital', 'Registration Number'];
+
 const normalizeKey = (value) =>
   String(value || '')
     .toLowerCase()
@@ -69,64 +71,15 @@ const MembersDetails = () => {
 
         const normalizedMembers = rawMembers.map((row, index) => {
           const safeRow = row && typeof row === 'object' ? row : {};
-          const entries = Object.entries(safeRow).filter(([key]) => !isOldMembershipKey(key) && String(key).trim() !== '');
-
-          const findValue = (...keys) => {
-            for (const [key, value] of entries) {
-              const current = normalizeKey(key);
-              if (keys.includes(current)) {
-                const text = valueToText(value);
-                if (text) return text;
-              }
-            }
-            return '';
-          };
-
-          const memberId =
-            findValue('newmembershipnumbers', 'newmembershipnumber', 'membershipid', 'memberid', 'id') ||
-            `DC-${index + 1}`;
-
-          const name =
-            findValue('registrationno', 'registrationnumber', 'name', 'fullname', 'membername') ||
-            '-';
-
-          const email = findValue('email', 'emailid') || '-';
-
-          const details = entries.reduce((acc, [key, value]) => {
-            const cleanValue = valueToText(value);
-            if (!cleanValue) {
-              return acc;
-            }
-
-            const normalized = normalizeKey(key);
-            if (
-              normalized === 'newmembershipnumbers' ||
-              normalized === 'newmembershipnumber' ||
-              normalized === 'membershipid' ||
-              normalized === 'memberid' ||
-              normalized === 'id' ||
-              normalized === 'registrationno' ||
-              normalized === 'registrationnumber' ||
-              normalized === 'name' ||
-              normalized === 'fullname' ||
-              normalized === 'membername' ||
-              normalized === 'email' ||
-              normalized === 'emailid' ||
-              normalized === 'sno'
-            ) {
-              return acc;
-            }
-
-            acc[key] = cleanValue;
-            return acc;
-          }, {});
+          const memberName = valueToText(safeRow['Member Name']) || '-';
+          const hospital = valueToText(safeRow['Hospital']) || '-';
+          const registrationNumber = valueToText(safeRow['Registration Number']) || '-';
 
           return {
             serialNo: index + 1,
-            memberId,
-            name,
-            email,
-            details,
+            memberName,
+            hospital,
+            registrationNumber,
           };
         });
 
@@ -142,28 +95,29 @@ const MembersDetails = () => {
     fetchMembers();
   }, [GOOGLE_SCRIPT_URL]);
 
-  const detailHeaders = useMemo(() => {
-    const headerSet = new Set();
-    members.forEach((member) => {
-      Object.keys(member.details || {}).forEach((key) => headerSet.add(key));
-    });
-    return Array.from(headerSet);
-  }, [members]);
+  const detailHeaders = useMemo(() => DIRECTORY_HEADERS, []);
 
   const filteredMembers = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
 
     return members.filter((member) => {
-      if (emailTab === 'with_email' && member.email === '-') return false;
-      if (emailTab === 'without_email' && member.email !== '-') return false;
+      if (emailTab === 'with_email' || emailTab === 'without_email') return true;
 
       if (!query) return true;
 
-      const inName = member.name.toLowerCase().includes(query);
-      const inId = member.memberId.toLowerCase().includes(query);
-      return inName || inId;
+      const inName = member.memberName.toLowerCase().includes(query);
+      const inHospital = member.hospital.toLowerCase().includes(query);
+      const inReg = member.registrationNumber.toLowerCase().includes(query);
+      return inName || inHospital || inReg;
     });
   }, [members, searchQuery, emailTab]);
+
+  const valueForHeader = (member, header) => {
+    if (header === 'Member Name') return member.memberName;
+    if (header === 'Hospital') return member.hospital;
+    if (header === 'Registration Number') return member.registrationNumber;
+    return '-';
+  };
 
   return (
     <motion.main
@@ -191,11 +145,11 @@ const MembersDetails = () => {
           <div className="grid md:grid-cols-12 gap-4 items-end">
             <div className="md:col-span-8">
               <label className="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase mb-2 ml-1">
-                Search by Name or Membership ID
+                Search by Name, Hospital, or Registration Number
               </label>
               <input
                 type="text"
-                placeholder="Type name or new membership ID"
+                placeholder="Type name, hospital, or registration number"
                 value={searchQuery}
                 onChange={(event) => setSearchQuery(event.target.value)}
                 className="w-full h-[56px] px-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all font-medium text-gray-700 dark:text-white"
@@ -247,9 +201,6 @@ const MembersDetails = () => {
               <thead className="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 uppercase text-xs font-bold tracking-wider">
                 <tr>
                   <th className="px-6 py-4 border-b dark:border-gray-600">S.No</th>
-                  <th className="px-6 py-4 border-b dark:border-gray-600">Membership ID</th>
-                  <th className="px-6 py-4 border-b dark:border-gray-600">Name</th>
-                  <th className="px-6 py-4 border-b dark:border-gray-600">Email</th>
                   {detailHeaders.map((header) => (
                     <th key={header} className="px-6 py-4 border-b dark:border-gray-600">
                       {prettifyHeader(header)}
@@ -263,9 +214,6 @@ const MembersDetails = () => {
                   Array.from({ length: 6 }).map((_, index) => (
                     <tr key={`skeleton-${index}`} className="animate-pulse">
                       <td className="px-6 py-4"><div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-10"></div></td>
-                      <td className="px-6 py-4"><div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-24"></div></td>
-                      <td className="px-6 py-4"><div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-40"></div></td>
-                      <td className="px-6 py-4"><div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-40"></div></td>
                       {detailHeaders.map((header) => (
                         <td key={`${header}-${index}`} className="px-6 py-4"><div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-24"></div></td>
                       ))}
@@ -273,21 +221,18 @@ const MembersDetails = () => {
                   ))
                 ) : filteredMembers.length > 0 ? (
                   filteredMembers.map((member) => (
-                    <tr key={`${member.memberId}-${member.serialNo}`} className="hover:bg-blue-50/50 dark:hover:bg-gray-700/50 transition-colors">
+                    <tr key={`${member.registrationNumber}-${member.serialNo}`} className="hover:bg-blue-50/50 dark:hover:bg-gray-700/50 transition-colors">
                       <td className="px-6 py-4 text-gray-600 dark:text-gray-300">{member.serialNo}</td>
-                      <td className="px-6 py-4 font-mono text-xs font-bold text-gray-600 dark:text-gray-300">{member.memberId}</td>
-                      <td className="px-6 py-4 font-bold text-gray-900 dark:text-white">{member.name}</td>
-                      <td className="px-6 py-4 text-gray-700 dark:text-gray-300">{member.email || '-'}</td>
                       {detailHeaders.map((header) => (
-                        <td key={`${member.memberId}-${header}`} className="px-6 py-4 text-gray-700 dark:text-gray-300">
-                          {member.details[header] || '-'}
+                        <td key={`${member.registrationNumber}-${header}`} className="px-6 py-4 text-gray-700 dark:text-gray-300">
+                          {valueForHeader(member, header) || '-'}
                         </td>
                       ))}
                     </tr>
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={4 + detailHeaders.length} className="px-6 py-12 text-center text-gray-500 dark:text-gray-400">
+                    <td colSpan={1 + detailHeaders.length} className="px-6 py-12 text-center text-gray-500 dark:text-gray-400">
                       No matching members found.
                     </td>
                   </tr>
@@ -307,14 +252,14 @@ const MembersDetails = () => {
               ))
             ) : filteredMembers.length > 0 ? (
               filteredMembers.map((member) => (
-                <div key={`mobile-${member.memberId}-${member.serialNo}`} className="p-5">
-                  <p className="text-xs font-mono text-gray-500 mb-1">{member.memberId}</p>
-                  <h4 className="font-bold text-gray-900 dark:text-white text-lg">{member.name}</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">Email: {member.email || '-'}</p>
+                <div key={`mobile-${member.registrationNumber}-${member.serialNo}`} className="p-5">
+                  <p className="text-xs font-mono text-gray-500 mb-1">{member.registrationNumber}</p>
+                  <h4 className="font-bold text-gray-900 dark:text-white text-lg">{member.memberName}</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">Hospital: {member.hospital}</p>
                   <div className="mt-3 grid grid-cols-1 gap-1 text-sm text-gray-600 dark:text-gray-300">
                     {detailHeaders.map((header) => (
-                      <p key={`mobile-${member.memberId}-${header}`}>
-                        <span className="font-semibold">{prettifyHeader(header)}:</span> {member.details[header] || '-'}
+                      <p key={`mobile-${member.registrationNumber}-${header}`}>
+                        <span className="font-semibold">{prettifyHeader(header)}:</span> {valueForHeader(member, header) || '-'}
                       </p>
                     ))}
                   </div>

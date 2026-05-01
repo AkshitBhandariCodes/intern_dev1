@@ -129,29 +129,29 @@ const Membership = () => {
                     Life Membership
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-6 flex-grow text-justify">
-                    A one-time fee for lifetime access to all member benefits, publications, and events at a reduced rate.
+                    One-time payment for lifetime membership and full access to society benefits.
                   </p>
                   <div className="mt-auto">
-                    <p className="text-3xl font-bold text-text-light dark:text-heading-dark">₹10,000</p>
+                    <p className="text-3xl font-bold text-text-light dark:text-heading-dark">Rs 5,000</p>
                     <p className="text-gray-500 dark:text-gray-500">One-Time Payment</p>
                   </div>
                 </motion.div>
 
-                {/* Card 2: Associate Life Membership*/}
+                {/* Card 2: Overseas Membership */}
                 <motion.div
                   className="bg-card-light dark:bg-card-dark p-8 rounded-lg shadow-lg border border-border-light dark:border-border-dark flex flex-col"
                   variants={cardVariants}
                   whileHover={{ y: -5, scale: 1.03 }}
                 >
                   <h3 className="text-2xl font-display font-semibold text-primary mb-4">
-                    Associate Membership
+                    Overseas Membership
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-6 flex-grow text-justify">
-                    For Gastroenterologists, GI Surgeons, Hepatologists, and Researcher Scientists who wish to collaborate with the society. Includes event discounts and updates.
+                    For overseas eligible or nominated members. Valid for 3 years and renewable in 3-year blocks.
                   </p>
                   <div className="mt-auto">
-                    <p className="text-3xl font-bold text-text-light dark:text-heading-dark">₹7,500</p>
-                    <p className="text-gray-500 dark:text-gray-500">One-Time Payment</p>
+                    <p className="text-3xl font-bold text-text-light dark:text-heading-dark">USD 200</p>
+                    <p className="text-gray-500 dark:text-gray-500">Per 3 Years</p>
                   </div>
                 </motion.div>
 
@@ -165,11 +165,11 @@ const Membership = () => {
                     Ad Hoc Membership
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 mb-6 flex-grow text-justify">
-                    A temporary membership for a maximum of 3 years, ideal for post graduate trainees, fellows and research fellows. A life membership can be applied after 3 years on additional payment of 7500 with proof of previous Ad hoc membership.
+                    Valid for 3 years and renewable on reapplication and repayment for another 3-year period.
                   </p>
                   <div className="mt-auto">
-                    <p className="text-3xl font-bold text-text-light dark:text-heading-dark">₹2,500</p>
-                    <p className="text-gray-500 dark:text-gray-500">Per Year</p>
+                    <p className="text-3xl font-bold text-text-light dark:text-heading-dark">Rs 1,500</p>
+                    <p className="text-gray-500 dark:text-gray-500">Per 3 Years</p>
                   </div>
                 </motion.div>
               </motion.div>

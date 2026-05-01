@@ -2,12 +2,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SEO from '../components/SEO';
 
-import PresidentPhoto from '../assets/Dr-Puja-Sakhuja,-President.jpg';
+import PresidentPhoto from '../assets/Dr Sonal Sharma, President.jpg';
 import SecretaryPhoto from '../assets/Dr-Prasenjit-Das,-Secrertary-General.jpg';
 import VicePresidentPhoto from '../assets/Dr-Anjali-Amarapurkar,-Vice-President.jpg';
 import TreasurerPhoto from '../assets/Dr-Arvind-Ahuja,-Treasurer.jpg';
 import JointTreasurerPhoto from '../assets/Dr-Lipika-Lipi,-Joint-Treasurer.jpg';
-import QrPhoto from '../images/qr.png';
 
 const STORAGE_KEY = 'dc_iapm_gallery_uploads';
 
@@ -15,42 +14,36 @@ const defaultImages = [
   {
     id: 'leadership-1',
     title: 'President Portrait',
-    category: 'Leadership',
+    category: 'Office Bearers',
     src: PresidentPhoto,
   },
   {
     id: 'leadership-2',
     title: 'Secretary Portrait',
-    category: 'Leadership',
+    category: 'Office Bearers',
     src: SecretaryPhoto,
   },
   {
     id: 'leadership-3',
     title: 'Vice President Portrait',
-    category: 'Leadership',
+    category: 'Office Bearers',
     src: VicePresidentPhoto,
   },
   {
     id: 'committee-1',
     title: 'Treasurer Profile',
-    category: 'Committee',
+    category: 'Office Bearers',
     src: TreasurerPhoto,
   },
   {
     id: 'committee-2',
     title: 'Joint Treasurer Profile',
-    category: 'Committee',
+    category: 'Office Bearers',
     src: JointTreasurerPhoto,
-  },
-  {
-    id: 'resource-1',
-    title: 'Conference QR Resource',
-    category: 'Resources',
-    src: QrPhoto,
   },
 ];
 
-const uploadCategories = ['Leadership', 'Committee', 'Academic Events', 'Resources'];
+const uploadCategories = ['Office Bearers'];
 
 const Gallery = () => {
   const [uploadedImages, setUploadedImages] = useState([]);
@@ -71,7 +64,7 @@ const Gallery = () => {
     try {
       const parsed = JSON.parse(raw);
       if (Array.isArray(parsed)) {
-        setUploadedImages(parsed);
+        setUploadedImages(parsed.filter((item) => item?.category === 'Office Bearers'));
       }
     } catch {
       setUploadedImages([]);

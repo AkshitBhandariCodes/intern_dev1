@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
-import DrPujaSakhuja from '../assets/Dr-Puja-Sakhuja,-President.jpg';
+import DrSonalSharma from '../assets/Dr Sonal Sharma, President.jpg';
 
 const PresidentMessage = () => {
     return (
@@ -26,7 +26,7 @@ const PresidentMessage = () => {
                         <div className="flex-shrink-0">
                             <motion.img
                                 className="w-40 h-40 rounded-full object-contain shadow-lg border-4 border-gold"
-                                src={DrPujaSakhuja}
+                                src={DrSonalSharma}
                                 initial={{ scale: 0.5, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}

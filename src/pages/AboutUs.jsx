@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import VicePresidentPhoto from '../assets/Dr-Anjali-Amarapurkar,-Vice-President.jpg';
 
 const AboutUs = () => {
   return (
@@ -71,6 +72,39 @@ const AboutUs = () => {
                 <li>Share academic event reports with the IAPM for evaluation of chapter activities.</li>
                 <li>Coordinate with IAPM and facilitate national initiatives such as National UG Quiz, National PG Quiz, surveys, etc.</li>
               </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Vice President Message */}
+        <motion.div
+          id="vice-president-message"
+          className="bg-white dark:bg-background-dark border border-border-light dark:border-border-dark rounded-2xl p-8 shadow-sm"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/3 text-center">
+              <img
+                src={VicePresidentPhoto}
+                alt="Prof Anjali Amarapurkar"
+                className="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto object-contain border-4 border-gold shadow-lg"
+              />
+              <h3 className="font-display text-2xl font-bold text-primary dark:text-white mt-5">
+                Prof Anjali Amarapurkar
+              </h3>
+              <p className="text-gold-DEFAULT dark:text-gold-light font-semibold">Vice President</p>
+              <p className="text-xs uppercase tracking-widest text-gray-600 dark:text-gray-200 mt-1">DC-IAPM</p>
+            </div>
+            <div className="md:w-2/3">
+              <h2 className="text-3xl font-bold font-display text-accent-blue dark:text-white mb-4 text-center md:text-left">
+                Message from the Vice President
+              </h2>
+              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                We are committed to strengthening academic excellence, collaboration, and professional growth within the DC-IAPM community. Together, we will continue to build a vibrant platform that supports our members and advances the field of pathology.
+              </p>
             </div>
           </div>
         </motion.div>
