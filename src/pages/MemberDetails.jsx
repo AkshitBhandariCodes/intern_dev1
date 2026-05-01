@@ -46,23 +46,22 @@ const MembersDetails = () => {
   const [emailTab, setEmailTab] = useState('all');
 
   useEffect(() => {
-    const fetchMembers = async () => {
-      setLoading(true);
-      setError('');
+    if (!GOOGLE_SCRIPT_URL) {
+      setError('Member directory source is not configured.');
+      setLoading(false);
+      return;
+    }
+
+    let isActive = true;
+    const callbackName = `dcMembersCallback_${Date.now()}`;
+
+    setLoading(true);
+    setError('');
+
+    window[callbackName] = (data) => {
+      if (!isActive) return;
 
       try {
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            action: 'get_members',
-            page: 1,
-            limit: 5000,
-          }),
-        });
-
-        const data = await response.json();
-
         const rawMembers = Array.isArray(data?.members)
           ? data.members
           : Array.isArray(data?.data)
@@ -92,7 +91,29 @@ const MembersDetails = () => {
       }
     };
 
-    fetchMembers();
+    const params = new URLSearchParams({
+      action: 'get_members',
+      page: '1',
+      limit: '5000',
+      callback: callbackName,
+    });
+
+    const script = document.createElement('script');
+    script.src = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
+    script.async = true;
+    script.onerror = () => {
+      if (!isActive) return;
+      setError('Unable to load member directory right now. Please try again shortly.');
+      setLoading(false);
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      isActive = false;
+      if (script.parentNode) script.parentNode.removeChild(script);
+      delete window[callbackName];
+    };
   }, [GOOGLE_SCRIPT_URL]);
 
   const detailHeaders = useMemo(() => DIRECTORY_HEADERS, []);
