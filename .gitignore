@@ -30,3 +30,4 @@ src/docs/
 # Temporary extraction files
 tmp_*
 config.bat
+.env
