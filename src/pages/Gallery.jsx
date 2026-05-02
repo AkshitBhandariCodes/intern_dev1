@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 
 import PresidentPhoto from '../assets/Dr Sonal Sharma, President.jpg';
 import SecretaryPhoto from '../assets/Dr-Prasenjit-Das,-Secrertary-General.jpg';
-import VicePresidentPhoto from '../assets/Dr-Anjali-Amarapurkar,-Vice-President.jpg';
+import VicePresidentPhoto from '../assets/Dr-Arvind-Ahuja,-Treasurer.jpg';
 import TreasurerPhoto from '../assets/Dr-Arvind-Ahuja,-Treasurer.jpg';
 import JointTreasurerPhoto from '../assets/Dr-Lipika-Lipi,-Joint-Treasurer.jpg';
 

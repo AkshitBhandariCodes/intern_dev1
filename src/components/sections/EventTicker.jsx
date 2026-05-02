@@ -30,14 +30,21 @@ const EventTicker = () => {
         fetchEvents();
     }, []);
 
+    const promoEvent = {
+        title: "We are also conducting a promotional membership drive where a pathologist can become member paying only 1500/- until Dec 31st 2026. This additional tab can be added and we will later delete",
+    };
+
     // Use default static events if API returns empty or while loading to avoid empty bar
-    const displayEvents = events.length > 0 ? events : [
-        {
-            title: "Welcome to DC-IAPM",
-            date: new Date().getFullYear(),
-            location: "New Delhi"
-        }
-    ];
+    const displayEvents = events.length > 0
+        ? [promoEvent, ...events]
+        : [
+            promoEvent,
+            {
+                title: "Welcome to DC-IAPM",
+                date: new Date().getFullYear(),
+                location: "New Delhi"
+            }
+        ];
 
     // Duplicate the array to create a seamless loop
     const duplicatedEvents = [...displayEvents, ...displayEvents, ...displayEvents];

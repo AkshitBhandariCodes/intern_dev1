@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
-import VicePresidentPhoto from '../assets/Dr-Anjali-Amarapurkar,-Vice-President.jpg';
+import VicePresidentPhoto from '../assets/Dr-Arvind-Ahuja,-Treasurer.jpg';
 
 const AboutUs = () => {
   return (
@@ -89,11 +89,11 @@ const AboutUs = () => {
             <div className="md:w-1/3 text-center">
               <img
                 src={VicePresidentPhoto}
-                alt="Prof Anjali Amarapurkar"
+                alt="Prof Arvind Ahuja"
                 className="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto object-contain border-4 border-gold shadow-lg"
               />
               <h3 className="font-display text-2xl font-bold text-primary dark:text-white mt-5">
-                Prof Anjali Amarapurkar
+                Prof Arvind Ahuja
               </h3>
               <p className="text-gold-DEFAULT dark:text-gold-light font-semibold">Vice President</p>
               <p className="text-xs uppercase tracking-widest text-gray-600 dark:text-gray-200 mt-1">DC-IAPM</p>
