@@ -103,7 +103,39 @@ const AboutUs = () => {
                 Message from the Vice President
               </h2>
               <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
-                We are committed to strengthening academic excellence, collaboration, and professional growth within the DC-IAPM community. Together, we will continue to build a vibrant platform that supports our members and advances the field of pathology.
+                Dear Esteemed Members and Colleagues,
+              </p>
+              &nbsp;
+              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                It is both a privilege and a profound honor to serve as the Vice President of the Delhi Chapter of IAPM. I accept this responsibility with a deep sense of commitment to furthering our shared vision of excellence in training, collaboration, research, and academic advancement.
+              </p>
+              &nbsp;
+              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                Our society, with a proud legacy spanning over 35 years, has consistently contributed to the growth and development of the field of pathology. In recent times, through the dedicated and collective efforts of our office bearers, we have achieved significant milestones, including formal registration under the Societies Act and the acquisition of a PAN card.. These developments mark an important step toward strengthening the institutional framework and governance of our society.
+              </p>
+              &nbsp;
+              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                Having previously had the opportunity to serve as Treasurer and Secretary of the society, I have remained committed to enhancing transparency, efficiency, and accessibility through digital transformation. In this regard, it is especially gratifying to note that we are now have developed our new official website, which will serve as a dynamic platform for communication, knowledge sharing, and engagement among members.
+              </p>
+              &nbsp;
+              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                We remain steadfast in our commitment to capacity building and continuous professional development. Through multidisciplinary workshops, hands-on training programs, academic conferences, and collaborative initiatives, we aim to create an environment that nurtures learning, encourages innovation, and facilitates the exchange of knowledge across institutions and among professionals at all stages of their careers.
+              </p>
+              &nbsp;
+              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                As we move forward, I firmly believe that, together, we can position the Delhi Chapter of IAPM at the forefront of academic and professional excellence. By fostering innovation, embracing emerging technologies, and strengthening collaborative networks, we can significantly contribute to the advancement of pathology and its vital role in modern healthcare.
+              </p>
+              &nbsp;
+              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                Standing at the threshold of a transformative era in medicine, I am optimistic and enthusiastic about the opportunities that lie ahead. I look forward to working closely with all of you in further strengthening our society and achieving new milestones of excellence.
+              </p>
+              &nbsp;
+              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                With warm regards,<br />
+                <strong>Dr. Prof. Arvind Ahuja</strong><br />
+                Director Professor and Head<br />
+                ABVIMS, Dr RML Hospital, New Delhi<br />
+                (Vice President)
               </p>
             </div>
           </div>
